@@ -1,0 +1,39 @@
+
+<shared-navbar></shared-navbar>
+
+<div class="container-fluid">
+  <div class="row">
+      <aside class="col-lg-9">
+          <div class="card">
+              <div class="table-responsive">
+                  <shopping-cart-producto [productos]="productos"></shopping-cart-producto>
+              </div>
+          </div>
+      </aside>
+      <aside class="col-lg-3">
+          <div class="card">
+              <div class="card-body">
+                  <dl class="dlist-align">
+                      <dt>Total price:</dt>
+                      <dd class="text-right ml-3">${{total}}</dd>
+                  </dl>
+                  <dl class="dlist-align">
+                    <dt>Califica a tu Representante</dt>
+                    <dd class="text-right ml-3">
+                        <select #calificacion>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </dd>
+                </dl>
+                  <hr> 
+                  <a href="/home" class="btn btn-out btn-primary btn-square btn-main" data-abc="true" (click)="pagar()"> Comprar </a> 
+                  <a href="/comprar" class="btn btn-out btn-success btn-square btn-main mt-2" data-abc="true">Seguir Comprando</a>
+              </div>
+          </div>
+      </aside>
+  </div>
+</div>
